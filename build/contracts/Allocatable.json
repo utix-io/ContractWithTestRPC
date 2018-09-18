@@ -1,0 +1,1247 @@
+{
+  "contractName": "Allocatable",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "allocateAgents",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "state",
+          "type": "bool"
+        }
+      ],
+      "name": "AllocateAgentChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "name": "state",
+          "type": "bool"
+        }
+      ],
+      "name": "setAllocateAgent",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610496806100536000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806326493a6f1461006757806327854452146100b65780638da5cb5b14610111578063f2fde38b14610168575b600080fd5b34801561007357600080fd5b506100b4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035151590602001909291905050506101ab565b005b3480156100c257600080fd5b506100f7600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102d0565b604051808215151515815260200191505060405180910390f35b34801561011d57600080fd5b506101266102f0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561017457600080fd5b506101a9600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610315565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561020657600080fd5b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055507fd31c153c670f6edcc54d96847d19c2beb8433d1fdf456144ecc246eb6bf533438282604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001821515151581526020019250505060405180910390a15050565b60016020528060005260406000206000915054906101000a900460ff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561037057600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156103ac57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820683a8ac774bb75bc5a0e565364a25d4fd455c80627db40c60c49a524f881b7410029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806326493a6f1461006757806327854452146100b65780638da5cb5b14610111578063f2fde38b14610168575b600080fd5b34801561007357600080fd5b506100b4600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035151590602001909291905050506101ab565b005b3480156100c257600080fd5b506100f7600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102d0565b604051808215151515815260200191505060405180910390f35b34801561011d57600080fd5b506101266102f0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561017457600080fd5b506101a9600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610315565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561020657600080fd5b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055507fd31c153c670f6edcc54d96847d19c2beb8433d1fdf456144ecc246eb6bf533438282604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001821515151581526020019250505060405180910390a15050565b60016020528060005260406000206000915054906101000a900460ff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561037057600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156103ac57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820683a8ac774bb75bc5a0e565364a25d4fd455c80627db40c60c49a524f881b7410029",
+  "sourceMap": "56:655:0:-;;;535:10:15;527:5;;:18;;;;;;;;;;;;;;;;;;56:655:0;;;;;;",
+  "deployedSourceMap": "56:655:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;362:172;;8:9:-1;5:2;;;30:1;27;20:12;5:2;362:172:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;162:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;162:47:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;248:20:15;;8:9:-1;5:2;;;30:1;27;20:12;5:2;248:20:15;;;;;;;;;;;;;;;;;;;;;;;;;;;898:192;;8:9:-1;5:2;;;30:1;27;20:12;5:2;898:192:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;362:172:0;698:5:15;;;;;;;;;;;684:19;;:10;:19;;;676:28;;;;;;;;472:5:0;449:14;:20;464:4;449:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;493:33;514:4;520:5;493:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;362:172;;:::o;162:47::-;;;;;;;;;;;;;;;;;;;;;;:::o;248:20:15:-;;;;;;;;;;;;;:::o;898:192::-;698:5;;;;;;;;;;;684:19;;:10;:19;;;676:28;;;;;;;;999:1;979:22;;:8;:22;;;;971:31;;;;;;;;1046:8;1018:37;;1039:5;;;;;;;;;;;1018:37;;;;;;;;;;;;1074:8;1066:5;;:16;;;;;;;;;;;;;;;;;;898:192;:::o",
+  "source": "pragma solidity 0.4.24;\r\n\r\nimport \"./Ownable.sol\";\r\n\r\n\r\ncontract Allocatable is Ownable {\r\n\r\n  /** List of agents that are allowed to allocate new tokens */\r\n    mapping (address => bool) public allocateAgents;\r\n\r\n    event AllocateAgentChanged(address addr, bool state  );\r\n\r\n  /**\r\n   * Owner can allow a crowdsale contract to allocate new tokens.\r\n   */\r\n    function setAllocateAgent(address addr, bool state) public onlyOwner  \r\n    {\r\n        allocateAgents[addr] = state;\r\n        emit AllocateAgentChanged(addr, state);\r\n    }\r\n\r\n    modifier onlyAllocateAgent() {\r\n        //Only crowdsale contracts are allowed to allocate new tokens\r\n        require(allocateAgents[msg.sender]);\r\n        _;\r\n    }\r\n}",
+  "sourcePath": "D:\\Utix Workspace\\UtixTokenSmartContract\\contracts\\Allocatable.sol",
+  "ast": {
+    "absolutePath": "/D/Utix Workspace/UtixTokenSmartContract/contracts/Allocatable.sol",
+    "exportedSymbols": {
+      "Allocatable": [
+        47
+      ]
+    },
+    "id": 48,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/D/Utix Workspace/UtixTokenSmartContract/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 48,
+        "sourceUnit": 3521,
+        "src": "27:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3520,
+              "src": "80:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$3520",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "80:7:0"
+          }
+        ],
+        "contractDependencies": [
+          3520
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 47,
+        "linearizedBaseContracts": [
+          47,
+          3520
+        ],
+        "name": "Allocatable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 8,
+            "name": "allocateAgents",
+            "nodeType": "VariableDeclaration",
+            "scope": 47,
+            "src": "162:47:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 7,
+              "keyType": {
+                "id": 5,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "171:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "162:25:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 6,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "182:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14,
+            "name": "AllocateAgentChanged",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "indexed": false,
+                  "name": "addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "245:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "245:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12,
+                  "indexed": false,
+                  "name": "state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "259:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "244:28:0"
+            },
+            "src": "218:55:0"
+          },
+          {
+            "body": {
+              "id": 34,
+              "nodeType": "Block",
+              "src": "438:96:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 23,
+                        "name": "allocateAgents",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8,
+                        "src": "449:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 25,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 24,
+                        "name": "addr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 16,
+                        "src": "464:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "449:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 26,
+                      "name": "state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18,
+                      "src": "472:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "449:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "449:28:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 30,
+                        "name": "addr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 16,
+                        "src": "514:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 31,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 18,
+                        "src": "520:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 29,
+                      "name": "AllocateAgentChanged",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "493:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bool_$returns$__$",
+                        "typeString": "function (address,bool)"
+                      }
+                    },
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "493:33:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 33,
+                  "nodeType": "EmitStatement",
+                  "src": "488:38:0"
+                }
+              ]
+            },
+            "documentation": "Owner can allow a crowdsale contract to allocate new tokens.\r",
+            "id": 35,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 21,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 20,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3494,
+                  "src": "421:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "421:9:0"
+              }
+            ],
+            "name": "setAllocateAgent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16,
+                  "name": "addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "388:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "388:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18,
+                  "name": "state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "402:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 17,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "402:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "387:26:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "438:0:0"
+            },
+            "scope": 47,
+            "src": "362:172:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 45,
+              "nodeType": "Block",
+              "src": "571:137:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 38,
+                          "name": "allocateAgents",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 8,
+                          "src": "661:14:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                            "typeString": "mapping(address => bool)"
+                          }
+                        },
+                        "id": 41,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 39,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11140,
+                            "src": "676:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 40,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "676:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "661:26:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 37,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        11143,
+                        11144
+                      ],
+                      "referencedDeclaration": 11143,
+                      "src": "653:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 42,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "653:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 43,
+                  "nodeType": "ExpressionStatement",
+                  "src": "653:35:0"
+                },
+                {
+                  "id": 44,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "699:1:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 46,
+            "name": "onlyAllocateAgent",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 36,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "568:2:0"
+            },
+            "src": "542:166:0",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 48,
+        "src": "56:655:0"
+      }
+    ],
+    "src": "0:711:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Utix Workspace/UtixTokenSmartContract/contracts/Allocatable.sol",
+    "exportedSymbols": {
+      "Allocatable": [
+        47
+      ]
+    },
+    "id": 48,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/D/Utix Workspace/UtixTokenSmartContract/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 48,
+        "sourceUnit": 3521,
+        "src": "27:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3520,
+              "src": "80:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$3520",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "80:7:0"
+          }
+        ],
+        "contractDependencies": [
+          3520
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 47,
+        "linearizedBaseContracts": [
+          47,
+          3520
+        ],
+        "name": "Allocatable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 8,
+            "name": "allocateAgents",
+            "nodeType": "VariableDeclaration",
+            "scope": 47,
+            "src": "162:47:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 7,
+              "keyType": {
+                "id": 5,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "171:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "162:25:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 6,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "182:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14,
+            "name": "AllocateAgentChanged",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "indexed": false,
+                  "name": "addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "245:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "245:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12,
+                  "indexed": false,
+                  "name": "state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "259:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "244:28:0"
+            },
+            "src": "218:55:0"
+          },
+          {
+            "body": {
+              "id": 34,
+              "nodeType": "Block",
+              "src": "438:96:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 23,
+                        "name": "allocateAgents",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8,
+                        "src": "449:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 25,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 24,
+                        "name": "addr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 16,
+                        "src": "464:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "449:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 26,
+                      "name": "state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18,
+                      "src": "472:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "449:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "449:28:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 30,
+                        "name": "addr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 16,
+                        "src": "514:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 31,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 18,
+                        "src": "520:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 29,
+                      "name": "AllocateAgentChanged",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "493:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bool_$returns$__$",
+                        "typeString": "function (address,bool)"
+                      }
+                    },
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "493:33:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 33,
+                  "nodeType": "EmitStatement",
+                  "src": "488:38:0"
+                }
+              ]
+            },
+            "documentation": "Owner can allow a crowdsale contract to allocate new tokens.\r",
+            "id": 35,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 21,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 20,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3494,
+                  "src": "421:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "421:9:0"
+              }
+            ],
+            "name": "setAllocateAgent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16,
+                  "name": "addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "388:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 15,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "388:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18,
+                  "name": "state",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "402:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 17,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "402:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "387:26:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "438:0:0"
+            },
+            "scope": 47,
+            "src": "362:172:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 45,
+              "nodeType": "Block",
+              "src": "571:137:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 38,
+                          "name": "allocateAgents",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 8,
+                          "src": "661:14:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                            "typeString": "mapping(address => bool)"
+                          }
+                        },
+                        "id": 41,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 39,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11140,
+                            "src": "676:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 40,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "676:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "661:26:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 37,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        11143,
+                        11144
+                      ],
+                      "referencedDeclaration": 11143,
+                      "src": "653:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 42,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "653:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 43,
+                  "nodeType": "ExpressionStatement",
+                  "src": "653:35:0"
+                },
+                {
+                  "id": 44,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "699:1:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 46,
+            "name": "onlyAllocateAgent",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 36,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "568:2:0"
+            },
+            "src": "542:166:0",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 48,
+        "src": "56:655:0"
+      }
+    ],
+    "src": "0:711:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-18T13:44:26.790Z"
+}
