@@ -19,7 +19,8 @@ contract('CrowdsaleTokenExt', function(accounts) {
 			[accounts[3]], 
 	  		[constants.reservedTokens.number], 
 	  		[constants.reservedTokens.percentageUnit,], 
-	  		[constants.reservedTokens.percentageDecimals]
+			  [constants.reservedTokens.percentageDecimals],
+			  [true]
   		).should.be.rejectedWith(ERROR_MSG);
 	})
 

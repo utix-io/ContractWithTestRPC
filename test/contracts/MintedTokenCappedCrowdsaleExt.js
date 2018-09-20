@@ -350,7 +350,9 @@ contract('MintedTokenCappedCrowdsaleExt 1 tier', function(accounts) {
 	
 	
 
-
+	it("Reserved address 2 updated token balance",  async () => { 
+		await checkVestedTokensBalance(accounts[7]); 
+	});
     
     it("should get allocate agent: crowdsale contract", function() {
 		return TokenVesting.deployed().then(function(instance) {
@@ -373,7 +375,7 @@ contract('MintedTokenCappedCrowdsaleExt 1 tier', function(accounts) {
 		let isVestingSetAdd1 = await tokenVesting.isVestingSet.call(accounts[3]);
 		true.should.be.equal(isVestingSetAdd1);
 		let isVestingSetAdd2 = await tokenVesting.isVestingSet.call(accounts[7]);
-		true.should.be.equal(isVestingSetAdd2);
+		false.should.be.equal(isVestingSetAdd2);
     });
 
     it("should get vesting Map for 1st account before changeFreezed to true", async () => {
@@ -398,27 +400,27 @@ contract('MintedTokenCappedCrowdsaleExt 1 tier', function(accounts) {
         true.should.be.equal(vestingMapAddress1[6]);	
 	});
 	
-	it("should get vesting Map for 2nd account before changeFreezed to true", async () => {
-		let tokenVesting = await TokenVesting.deployed();
-		let vestingMapAddress1 = await tokenVesting.vestingMap.call(accounts[7]);
-        assert.equal(vestingMapAddress1[1], 1, 'Cliff will be 1')
-        assert.equal(vestingMapAddress1[2], 4, 'Duration will be 4')
-        assert.equal(vestingMapAddress1[3], 5, 'Step will be 5 sec')        
-        constants.reservedTokens.number.should.be.bignumber.equal(vestingMapAddress1[4]);
-        assert.equal(vestingMapAddress1[5], 0, 'Token amount Released will be 0')
-        false.should.be.equal(vestingMapAddress1[6]);	
-	});
+	// it("should get vesting Map for 2nd account before changeFreezed to true", async () => {
+	// 	let tokenVesting = await TokenVesting.deployed();
+	// 	let vestingMapAddress1 = await tokenVesting.vestingMap.call(accounts[7]);
+    //     assert.equal(vestingMapAddress1[1], 1, 'Cliff will be 1')
+    //     assert.equal(vestingMapAddress1[2], 4, 'Duration will be 4')
+    //     assert.equal(vestingMapAddress1[3], 5, 'Step will be 5 sec')        
+    //     constants.reservedTokens.number.should.be.bignumber.equal(vestingMapAddress1[4]);
+    //     assert.equal(vestingMapAddress1[5], 0, 'Token amount Released will be 0')
+    //     false.should.be.equal(vestingMapAddress1[6]);	
+	// });
     
-    it("should set the changeFreezed to true", async () => {
-        let tokenVesting = await TokenVesting.deployed();
-        await tokenVesting.freezeChangesToVesting(accounts[7], { from: accounts[0] }).should.be.fulfilled;
-    })
+    // it("should set the changeFreezed to true", async () => {
+    //     let tokenVesting = await TokenVesting.deployed();
+    //     await tokenVesting.freezeChangesToVesting(accounts[7], { from: accounts[0] }).should.be.fulfilled;
+    // })
 
-	it("should get vesting Map for 2nd Accocunt", async () => {
-		let tokenVesting = await TokenVesting.deployed();
-		let vestingMapAddress1 = await tokenVesting.vestingMap.call(accounts[7]);    
-        true.should.be.equal(vestingMapAddress1[6]);	
-	});
+	// it("should get vesting Map for 2nd Accocunt", async () => {
+	// 	let tokenVesting = await TokenVesting.deployed();
+	// 	let vestingMapAddress1 = await tokenVesting.vestingMap.call(accounts[7]);    
+    //     true.should.be.equal(vestingMapAddress1[6]);	
+	// });
 	
 
     
@@ -442,17 +444,15 @@ contract('MintedTokenCappedCrowdsaleExt 1 tier', function(accounts) {
         releaseVestedTokens(accounts[3],constants.reservedTokens.number,4);        	
 	});	
 
-    it("Release 4th step vested tokens for 2nd Accocunt", async () => {
-		await timeout(5000);       
-        releaseVestedTokens(accounts[7],constants.reservedTokens.number,4);        	
-	});	
+    // it("Release 4th step vested tokens for 2nd Accocunt", async () => {
+	// 	await timeout(5000);       
+    //     releaseVestedTokens(accounts[7],constants.reservedTokens.number,4);        	
+	// });	
 
 	it("Vested address 1 updated token balance", async () => { 
 		await checkVestedTokensBalance(accounts[3]);
 	});
-	it("Vested address 2 updated token balance",  async () => { 
-		await checkVestedTokensBalance(accounts[7]); 
-	});
+	
 
 	function checkUpdatedBalanceOfMultisig(invested) {
 		let balanceOfMultisigUpdated = web3.eth.getBalance(accounts[9]);

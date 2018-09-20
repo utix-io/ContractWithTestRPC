@@ -35,7 +35,8 @@ module.exports = function(deployer, network, accounts) {
                     [accounts[3],accounts[7]],
                     [constants.reservedTokens.number,constants.reservedTokens.number],
                     [constants.reservedTokens.percentageUnit,constants.reservedTokens.percentageUnit],
-                    [constants.reservedTokens.percentageDecimals,constants.reservedTokens.percentageDecimals]
+                    [constants.reservedTokens.percentageDecimals,constants.reservedTokens.percentageDecimals],
+                    [true,false]
                 ),
                 mintedTokenCappedCrowdsaleExt.setEarlyParticipantWhitelistMultiple(
                     [accounts[0]],
